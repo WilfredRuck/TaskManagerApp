@@ -21,17 +21,6 @@ class Tasks extends React.Component {
     });
   }
 
-  updateTask(task) {
-    let body = JSON.stringify({task: {name: task.name, completed: !task.completed} })
-    fetch(`/api/projects/${this.props.projectId}/tasks/${task.id}`, {
-      method: 'PATCH',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: body,
-    })
-  }
-
   handleSubmit(e) {
     e.preventDefault();
     let body = JSON.stringify({task: {name: this.state.name} })
@@ -53,15 +42,7 @@ class Tasks extends React.Component {
   render() {
     const all_tasks = this.state.tasks.map((task, idx) => {
       return( 
-        <li key={idx} className="task"> 
-          <input 
-              onChange={() => {
-                this.updateTask(task)}} 
-              type='checkbox'
-              checked={task.completed}
-          />
-          <p>{task.name}</p> 
-        </li>
+        <TaskItem key={idx} task={task} projectId={this.props.project.id}/>
       )
     })
     return (
