@@ -1,0 +1,59 @@
+// Place all the styles related to the Projects controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.index {
+  background-image: url("https://trello-backgrounds.s3.amazonaws.com/SharedBackground/1365x2048/c296b0af7968b2f323801c665e938e97/photo-1557192523-882d668472e5");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin: 0;
+}
+
+li {
+  padding: 0;
+  margin: 0;
+}
+
+.nav-bar {
+  background-color: lightgray;
+  padding: 10px;
+}
+
+.projects-container {
+  overflow-x: auto;
+  height: 100vh;
+}
+
+.projects {
+  display: flex;
+  margin-top: 30px;
+}
+
+.projects .project {
+  background-color: lightgrey;
+  padding: 20px;
+  margin-right: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.button_to {
+  float: left;
+}
+
+.task {
+  display: flex;
+}
+
+input[type="checkbox"] {
+  margin: auto;
+}
