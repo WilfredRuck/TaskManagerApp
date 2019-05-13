@@ -3,3 +3,12 @@
 <p> Name: <%= @user.username.capitalize %> </p>
 <p> Email: <%= @user.email %> </p>
 
+<div>
+  <h2>Completed Tasks</h2>
+  <ul class="bulleted">
+    <% @tasks.each do |task| %>
+      <li> <%= task.name %> </li>
+    <% end %>
+  <ul>
+</div>
+

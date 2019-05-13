@@ -3,8 +3,7 @@ class Tasks extends React.Component {
     super(props);
     this.state = {
       tasks: [],
-      name: '',
-      progressBar: 0
+      name: ''
     }
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -14,14 +13,6 @@ class Tasks extends React.Component {
       .then((response) => {return response.json()})
       .then((data) => {
         this.setState({ tasks: data }) })
-      .then(
-        this.updateProgressBar()
-      );
-  }
-
-  updateProgressBar() {
-    this.setState({progressBar: this.state.tasks.length});
-    // debugger
   }
 
   updateField(field) {
@@ -38,11 +29,6 @@ class Tasks extends React.Component {
         'Content-Type': 'application/json'
       },
       body: body,
-    }).then((response) => {
-      return response.json()})
-    .then((task)=>{
-      let newProgressBar = this.state.progressBar + 1
-      this.setState({progressBar: newProgressBar})
     })
   }
 
@@ -81,7 +67,6 @@ class Tasks extends React.Component {
     return (
       <div>
         <h1>{this.props.project.name}</h1>
-        {/* {this.state.progressBar} */}
         <ul className="tasks">
 
           {all_tasks}
