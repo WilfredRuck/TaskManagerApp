@@ -55,7 +55,7 @@ class Projects extends React.Component {
         
         <form onSubmit={this.handleSubmit}>
         
-        <label>Name:
+        <label class="project-label">Name:
           <input 
             type="text" 
             placeholder="Enter project name"

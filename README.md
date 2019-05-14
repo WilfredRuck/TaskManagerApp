@@ -16,6 +16,13 @@ Navigate to the project folder in your console, run  <b>bundle install</b>. Then
 
 Run <b>rails server</b> to run the server and view the application in your browser via <b>localhost:3000</b>
 
+## Future Features
+
+<ul>
+  <li>Progress meter for each project</li>
+  <li>Admin capabilities</li>
+</ul>
+
 ## Authors
 
 * **WIlfred Ruck** - *Public code repos* - [WilfredRuck](https://github.com/WilfredRuck)
